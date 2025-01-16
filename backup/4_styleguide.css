@@ -1,0 +1,11 @@
+:root {
+    --note-font-family: "Plus Jakarta Sans", Helvetica;
+    --note-font-weight: 600;
+    --note-font-size: 22px;
+    --note-letter-spacing: 1.54px;
+    --note-line-height: 110.00000238418579%;
+    --note-font-style: normal;
+    --product-review-black: rgba(0, 0, 0, 1);
+    --product-review-color: rgba(245, 241, 233, 1);
+  }
+  

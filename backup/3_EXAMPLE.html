@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="2_globals.css" />
+    <link rel="stylesheet" href="2_styleguide.css" />
+    <link rel="stylesheet" href="2_style.css" />
+  </head>
+  <body>
+    <div class="EXAMPLE">
+      <div class="div">
+        <div class="frame">
+          <p class="text-wrapper">Try with your own image:</p>
+          <input 
+            type="file" 
+            id="folderInput" 
+            accept="image/jpeg, image/jpg"
+            multiple 
+            style="display: none;" 
+          />
+          <div class="upload-wrapper">
+            <div class="upload" id="uploadButton">UPLOAD</div>
+          </div>
+          <div id="uploadResults" style="margin-top: 10px;"></div>
+        </div>
+        <div class="overlap-group">
+          <div class="frame-2"></div>
+          <div class="text-wrapper-2">EXAMPLE</div>
+        </div>
+        <a href="1_PROCESS.html" style="text-decoration: none;">
+          <div class="text-wrapper-3">EMBEDDING PROCESS</div>
+        </a>
+        <a href="0_HOME.html" style="text-decoration: none;">
+          <div class="home">HOME</div>
+        </a>
+      </div>
+    </div>
+
+    <script>
+        document.getElementById('uploadButton').addEventListener('click', () => {
+          document.getElementById('folderInput').click();
+        });
+  
+        document.getElementById('folderInput').addEventListener('change', (event) => {
+          const files = event.target.files;
+          const resultsDiv = document.getElementById('uploadResults');
+          
+          const imageFiles = Array.from(files).filter(file => {
+            return file.type === 'image/jpeg' || file.type === 'image/jpg';
+          });
+  
+          if (imageFiles.length > 0) {
+            resultsDiv.innerHTML = `<p>Selected ${imageFiles.length} image(s):</p>`;
+            
+            let loadedImages = 0;
+            imageFiles.forEach(file => {
+              const reader = new FileReader();
+              reader.onload = function(e) {
+                resultsDiv.innerHTML += `
+                  <div style="margin: 10px 0;">
+                    <p>- ${file.name} (${Math.round(file.size / 1024)} KB)</p>
+                    <img src="${e.target.result}" style="max-width: 200px; margin: 5px 0;">
+                  </div>
+                `;
+                
+                loadedImages++;
+                // Store the image data in localStorage
+                localStorage.setItem('uploadedImage', e.target.result);
+                localStorage.setItem('imageName', file.name);
+                
+                if (loadedImages === imageFiles.length) {
+                  setTimeout(() => {
+                    window.location.href = '4_RESULT.html';
+                  }, 1000);
+                }
+              };
+              reader.readAsDataURL(file);
+              console.log(`Image file: ${file.name}, Size: ${file.size} bytes`);
+            });
+          } else {
+            resultsDiv.innerHTML = '<p style="color: red;">Please select JPG/JPEG files only.</p>';
+          }
+        });
+      </script>
+  </body>
+</html>

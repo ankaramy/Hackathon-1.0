@@ -1,0 +1,91 @@
+.home-page {
+    background-color: #000000;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .home-page .frame-wrapper {
+    background-color: #000000;
+    width: 1728px;
+    height: 1117px;
+  }
+  
+  .home-page .frame {
+    position: relative;
+    width: 1643px;
+    height: 909px;
+    top: 162px;
+    left: 42px;
+    background-color: var(--product-review-color);
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  
+  .home-page .turning-images-into {
+    position: absolute;
+    width: 1319px;
+    top: 395px;
+    left: 93px;
+    font-family: "Plus Jakarta Sans-SemiBold", Helvetica;
+    font-weight: 600;
+    color: var(--product-review-black);
+    font-size: 120px;
+    letter-spacing: 0;
+    line-height: 132.0px;
+  }
+  
+  .home-page .how-machines-see {
+    position: absolute;
+    width: 1433px;
+    top: 111px;
+    left: 93px;
+    font-family: "Plus Jakarta Sans-Light", Helvetica;
+    font-weight: 300;
+    color: var(--product-review-black);
+    font-size: 120px;
+    letter-spacing: 0;
+    line-height: 132.0px;
+  }
+  
+  .home-page .text-wrapper {
+    position: absolute;
+    width: 990px;
+    top: 707px;
+    left: 93px;
+    font-family: "Plus Jakarta Sans-LightItalic", Helvetica;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--product-review-black);
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: 44.0px;
+  }
+  
+  .home-page .start-wrapper {
+    position: absolute;
+    width: 246px;
+    height: 53px;
+    top: 735px;
+    left: 1210px;
+    background-color: #000000;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  
+  .home-page .start {
+    position: absolute;
+    width: 186px;
+    top: 14px;
+    left: 30px;
+    font-family: var(--note-font-family);
+    font-weight: var(--note-font-weight);
+    color: #ffffff;
+    font-size: var(--note-font-size);
+    text-align: center;
+    letter-spacing: var(--note-letter-spacing);
+    line-height: var(--note-line-height);
+    white-space: nowrap;
+    font-style: var(--note-font-style);
+  }

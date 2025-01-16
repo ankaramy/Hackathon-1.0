@@ -1,0 +1,200 @@
+.EMBEDDING-PROCESS {
+    background-color: #000000;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .EMBEDDING-PROCESS .div {
+    background-color: #000000;
+    width: 1728px;
+    height: 1117px;
+    position: relative;
+  }
+  
+  .EMBEDDING-PROCESS .overlap-group {
+    position: absolute;
+    width: 1643px;
+    height: 909px;
+    top: 162px;
+    left: 42px;
+    border-radius: 15px;
+  }
+  
+  .EMBEDDING-PROCESS .frame {
+    width: 1643px;
+    height: 909px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: var(--product-review-color);
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  
+  .EMBEDDING-PROCESS .what-are-the-steps {
+    position: absolute;
+    width: 1144px;
+    top: 100px;
+    left: 40px;
+    font-family: "Plus Jakarta Sans-LightItalic", Helvetica;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--product-review-black);
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: 44.0px;
+  }
+  
+  .EMBEDDING-PROCESS .element-input-layer-the {
+    position: absolute;
+    width: 204px;
+    top: 612px;
+    left: 56px;
+    font-family: "Plus Jakarta Sans-Bold", Helvetica;
+    font-weight: 400;
+    color: var(--product-review-black);
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: 24.4px;
+  }
+  
+  .EMBEDDING-PROCESS .text-wrapper {
+    font-weight: 700;
+  }
+  
+  .EMBEDDING-PROCESS .span {
+    font-family: "Plus Jakarta Sans-Regular", Helvetica;
+    font-size: 16px;
+    line-height: 17.6px;
+  }
+  
+  .EMBEDDING-PROCESS .text-wrapper-2 {
+    font-family: "Plus Jakarta Sans-Light", Helvetica;
+    font-weight: 300;
+  }
+  
+  .EMBEDDING-PROCESS .element-first-convolution {
+    position: absolute;
+    width: 204px;
+    top: 612px;
+    left: 322px;
+    font-family: "Plus Jakarta Sans-Bold", Helvetica;
+    font-weight: 400;
+    color: var(--product-review-black);
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: 24.4px;
+  }
+  
+  .EMBEDDING-PROCESS .element-first-subsampling {
+    position: absolute;
+    width: 203px;
+    top: 612px;
+    left: 588px;
+    font-family: "Plus Jakarta Sans-Bold", Helvetica;
+    font-weight: 400;
+    color: var(--product-review-black);
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: 24.4px;
+  }
+  
+  .EMBEDDING-PROCESS .element-second-convolution {
+    position: absolute;
+    width: 203px;
+    top: 612px;
+    left: 853px;
+    font-family: "Plus Jakarta Sans-Bold", Helvetica;
+    font-weight: 400;
+    color: var(--product-review-black);
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: 24.4px;
+  }
+  
+  .EMBEDDING-PROCESS .element-second-subsampling {
+    position: absolute;
+    width: 204px;
+    top: 612px;
+    left: 1118px;
+    font-family: "Plus Jakarta Sans-Bold", Helvetica;
+    font-weight: 400;
+    color: var(--product-review-black);
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: 24.4px;
+  }
+  
+  .EMBEDDING-PROCESS .element-fully-connected {
+    position: absolute;
+    width: 204px;
+    top: 612px;
+    left: 1384px;
+    font-family: "Plus Jakarta Sans-Bold", Helvetica;
+    font-weight: 400;
+    color: var(--product-review-black);
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: 24.4px;
+  }
+  
+  .EMBEDDING-PROCESS .home {
+    position: absolute;
+    width: 156px;
+    top: 113px;
+    left: 64px;
+    font-family: var(--note-font-family);
+    font-weight: var(--note-font-weight);
+    color: #ffffff;
+    font-size: var(--note-font-size);
+    letter-spacing: var(--note-letter-spacing);
+    line-height: var(--note-line-height);
+    white-space: nowrap;
+    font-style: var(--note-font-style);
+  }
+  
+  .EMBEDDING-PROCESS .text-wrapper-3 {
+    position: absolute;
+    width: 291px;
+    top: 114px;
+    left: 1377px;
+    font-family: var(--note-font-family);
+    font-weight: var(--note-font-weight);
+    color: #ffffff;
+    font-size: var(--note-font-size);
+    text-align: right;
+    letter-spacing: var(--note-letter-spacing);
+    line-height: var(--note-line-height);
+    white-space: nowrap;
+    font-style: var(--note-font-style);
+  }
+  
+  .EMBEDDING-PROCESS .div-wrapper {
+    width: 325px;
+    height: 53px;
+    top: 99px;
+    left: 701px;
+    position: absolute;
+    background-color: var(--product-review-color);
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  
+  .EMBEDDING-PROCESS .text-wrapper-4 {
+    position: absolute;
+    width: 291px;
+    top: 14px;
+    left: 17px;
+    font-family: var(--note-font-family);
+    font-weight: var(--note-font-weight);
+    color: #000000;
+    font-size: var(--note-font-size);
+    text-align: center;
+    letter-spacing: var(--note-letter-spacing);
+    line-height: var(--note-line-height);
+    white-space: nowrap;
+    font-style: var(--note-font-style);
+  }
+  
