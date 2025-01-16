@@ -1,6 +1,6 @@
 // Load the PNG image
 const img = new Image();
-img.src = 'icons/ramy8508.jpg'; // Replace with your image path
+img.src = 'Ramy/ramy8508.jpg'; // Replace with your image path
 
 img.onload = () => {
     // Tiling Pattern 1: Simple Grid
