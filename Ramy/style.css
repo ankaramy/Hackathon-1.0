@@ -1,0 +1,97 @@
+body {
+
+    display: flex; /* Enable Flexbox */
+    flex-wrap: wrap; /* Allow canvases to wrap on smaller screens */
+    gap: 10px; /* Space between canvases */
+    height: 100vh; /* Full viewport height to center vertically */
+    margin: 500px; /* Remove default margin */
+    padding: 0; /* Remove padding for perfect centering */
+
+    min-width: 4000px; /* Set a minimum width larger than the viewport */
+    overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+/* Style for all canvases */
+canvas {
+    border: 1px solid #333; /* Optional border for clarity */
+    width: 250px; /* Scaled width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure canvases align properly */
+}
+
+#canvas5 {
+    filter: hue-rotate(90deg);
+    position: absolute; /* Take it out of the normal flow */
+    top: 300px; /* Adjust vertical position */
+    left: 1840px; /* Adjust horizontal position */
+}
+
+#canvas7 {
+    position: absolute; /* Take it out of the normal flow */
+    top: 600px; /* Adjust vertical position */
+    left: 1610px; /* Adjust horizontal position */
+}
+
+#canvas6 {
+    position: absolute;
+    top: 400px; /* Adjust the vertical position */
+    left: 1740px; /* Adjust the horizontal position */
+    filter: grayscale(100%);
+    
+}
+
+#canvas8 {
+    position: absolute; /* Take it out of the normal flow */
+    top: 600px; /* Adjust vertical position */
+    left: 2100px; /* Adjust horizontal position */
+    border: 1px solid #333; /* Optional border for clarity */
+    width: 100px; /* Scaled width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure canvases align properly */
+    filter: grayscale(100%) brightness(0.5) contrast(1.2);
+}
+
+#canvas9 {
+    position: absolute; /* Take it out of the normal flow */
+    top: 540px; /* Adjust vertical position */
+    left: 2160px; /* Adjust horizontal position */
+    border: 1px solid #333; /* Optional border for clarity */
+    width: 100px; /* Scaled width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure canvases align properly */
+    filter: grayscale(100%) brightness(1.0) contrast(1.2);
+}
+
+#canvas10 {
+    position: absolute; /* Take it out of the normal flow */
+    top: 480px; /* Adjust vertical position */
+    left: 2200px; /* Adjust horizontal position */
+    border: 1px solid #333; /* Optional border for clarity */
+    width: 100px; /* Scaled width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure canvases align properly */
+    filter: grayscale(100%) brightness(1.5) contrast(1.2);
+}
+
+#canvas11 {
+    position: absolute; /* Take it out of the normal flow */
+    top: 420px; /* Adjust vertical position */
+    left: 2260px; /* Adjust horizontal position */
+    border: 1px solid #333; /* Optional border for clarity */
+    width: 100px; /* Scaled width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure canvases align properly */
+    filter: grayscale(100%) brightness(2.0) contrast(1.2);
+}
+
+#arrowCanvas {
+    position: absolute; /* Enable precise positioning */
+    top: 600px; /* Adjust vertical position */
+    left: 2160px; /* Adjust horizontal position */
+    transform: rotate(-40deg); /* Set initial rotation */
+    border: 0px solid #333; /* Optional: Add a border for clarity */
+    width: 400px; /* Adjust width */
+    height: auto; /* Adjust height */
+}
+
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Juxtaposition</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: row; /* Align canvases horizontally */
+            gap: 20px; /* Add spacing between canvases */
+            justify-content: flex-start; /* Align items to the left */
+            align-items: flex-start; /* Align items to the top */
+            margin: 0;
+            padding: 20px;
+        }
+        canvas {
+            border: 1px solid black; /* Optional: Add a border for clarity */
+        }
+
+        #arrowCanvas {
+            border: 1px solid black; /* Optional: Add a border for the arrow canvas */
+            width: 600px; /* Adjust canvas width */
+            height: 600px; /* Adjust canvas height */
+        }
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <canvas id="canvas1"></canvas>
+    <canvas id="canvas2"></canvas>
+    <canvas id="canvas3"></canvas>
+    <canvas id="canvas4"></canvas>
+    <canvas id="canvas5"></canvas> <!-- Duplicate of Canvas 4 -->
+    <canvas id="canvas6"></canvas> <!-- Duplicate of Canvas 4 -->
+    <canvas id="canvas7"></canvas> 
+    <canvas id="canvas8"></canvas>
+    <canvas id="canvas9"></canvas>
+    <canvas id="canvas10"></canvas>
+    <canvas id="canvas11"></canvas>
+
+    <!-- Graph with Red Vector -->
+    <canvas id="arrowCanvas"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
