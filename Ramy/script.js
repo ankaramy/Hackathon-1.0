@@ -224,7 +224,7 @@ function createAnimatedTiling(canvasId, image, rows, cols) {
         frameCount++;
 
         // Skip frames dynamically to reduce workload
-        if (frameCount % 7 !== 0) {
+        if (frameCount % 10 !== 0) {
             requestAnimationFrame(animate);
             return;
         }
@@ -273,3 +273,74 @@ function createAnimatedTiling(canvasId, image, rows, cols) {
     // Start the animation
     animate();
 }
+
+function drawGraph() {
+    const canvas = document.getElementById('graphCanvas');
+    const ctx = canvas.getContext('2d');
+
+    // Set canvas size (match CSS dimensions)
+    canvas.width = 400;
+    canvas.height = 400;
+
+    // Draw X and Y axes
+    ctx.beginPath();
+    ctx.moveTo(50, 350); // Start point of X-axis
+    ctx.lineTo(350, 350); // End point of X-axis
+    ctx.moveTo(50, 350); // Start point of Y-axis
+    ctx.lineTo(50, 50); // End point of Y-axis
+    ctx.strokeStyle = 'black';
+    ctx.lineWidth = 2;
+    ctx.stroke();
+
+    // Draw arrowheads for axes
+    ctx.beginPath();
+    ctx.moveTo(350, 350); // X-axis arrow
+    ctx.lineTo(340, 340);
+    ctx.lineTo(340, 360);
+    ctx.closePath();
+    ctx.fillStyle = 'black';
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.moveTo(50, 50); // Y-axis arrow
+    ctx.lineTo(40, 60);
+    ctx.lineTo(60, 60);
+    ctx.closePath();
+    ctx.fillStyle = 'black';
+    ctx.fill();
+
+    // Draw the red arrow vector
+    ctx.beginPath();
+    ctx.moveTo(50, 350); // Base of the vector
+    ctx.lineTo(250, 150); // Tip of the vector
+    ctx.strokeStyle = 'red';
+    ctx.lineWidth = 2;
+    ctx.stroke();
+
+    // Draw the arrowhead for the vector
+    const angle = Math.atan2(150 - 350, 250 - 50); // Calculate vector angle
+    const arrowHeadLength = 10;
+    ctx.beginPath();
+    ctx.moveTo(250, 150);
+    ctx.lineTo(
+        250 - arrowHeadLength * Math.cos(angle - Math.PI / 6),
+        150 - arrowHeadLength * Math.sin(angle - Math.PI / 6)
+    );
+    ctx.lineTo(
+        250 - arrowHeadLength * Math.cos(angle + Math.PI / 6),
+        150 - arrowHeadLength * Math.sin(angle + Math.PI / 6)
+    );
+    ctx.closePath();
+    ctx.fillStyle = 'red';
+    ctx.fill();
+
+    // Optional: Add a red dot at the base of the arrow
+    ctx.beginPath();
+    ctx.arc(50, 350, 5, 0, 2 * Math.PI); // Draw a small circle
+    ctx.fillStyle = 'red';
+    ctx.fill();
+}
+
+// Call the function to draw the graph
+drawGraph();
+

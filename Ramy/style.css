@@ -94,4 +94,12 @@ canvas {
     height: auto; /* Adjust height */
 }
 
+#graphCanvas {
+    position: absolute;
+    top: 420px; /* Align with canvas11 */
+    left: 2600px; /* Position it to the right of canvas11 */
+    width: 400px; /* Set width */
+    height: 400px; /* Set height */
+    border: 0px solid #333; /* Optional: Add border for clarity */
+}
 
