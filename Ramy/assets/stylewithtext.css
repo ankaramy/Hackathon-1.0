@@ -1,0 +1,179 @@
+:root {
+    --note-font-family: "Plus Jakarta Sans", Helvetica;
+    --note-font-weight: 400;
+    --note-font-size: 18px;
+    --note-letter-spacing: 1.3px;
+    --note-line-height: 1.1; /* Adjusted for proper CSS compatibility */
+    --note-font-style: normal;
+    --product-review-black: rgba(0, 0, 0, 1);
+    --product-review-color: rgba(245, 241, 233, 1);
+}
+
+body {
+    display: flex; /* Enable Flexbox for horizontal layout */
+    flex-wrap: wrap; /* Allow canvases to wrap on smaller screens */
+    gap: 10px; /* Space between canvases */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove padding for perfect centering */
+    min-width: 4000px; /* Set a minimum width larger than the viewport */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    font-family: var(--note-font-family); /* Apply custom font */
+    font-weight: var(--note-font-weight);
+    font-size: var(--note-font-size);
+    color: var(--product-review-black); /* Use custom text color */
+    background-color: var(--product-review-color); /* Use custom background color */
+    letter-spacing: var(--note-letter-spacing);
+    line-height: var(--note-line-height);
+}
+
+/* Style for individual canvas wrappers */
+.canvas-wrapper {
+    display: flex;
+    flex-direction: column; /* Stack canvas and text vertically */
+    align-items: center; /* Center-align canvases and text */
+    position: relative; /* Keep relative positioning for absolute child elements */
+    margin-bottom: 20px; /* Add spacing between sections */
+}
+
+/* Style for all canvases */
+canvas {
+    border: 1px solid var(--product-review-black); /* Optional border for clarity */
+    width: 250px; /* Default canvas width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure canvases align properly */
+    background-color: var(--product-review-color); /* Match the page background */
+}
+
+/* Adjustments for specific canvases */
+#canvas5 {
+    filter: hue-rotate(90deg);
+    position: absolute;
+    top: 300px;
+    left: 1840px;
+}
+
+#canvas6 {
+    position: absolute;
+    top: 400px;
+    left: 1740px;
+    filter: grayscale(100%);
+}
+
+#canvas7 {
+    position: absolute;
+    top: 600px;
+    left: 1610px;
+}
+
+#canvas8,
+#canvas9,
+#canvas10,
+#canvas11 {
+    position: absolute;
+    width: 100px; /* Smaller size for zoomed tiles */
+    height: auto;
+    border: 1px solid var(--product-review-black);
+    display: block;
+    background-color: var(--product-review-color); /* Match the page background */
+}
+
+#canvas8 {
+    top: 600px;
+    left: 2100px;
+    filter: grayscale(100%) brightness(0.5) contrast(1.2);
+}
+
+#canvas9 {
+    top: 540px;
+    left: 2160px;
+    filter: grayscale(100%) brightness(1.0) contrast(1.2);
+}
+
+#canvas10 {
+    top: 480px;
+    left: 2200px;
+    filter: grayscale(100%) brightness(1.5) contrast(1.2);
+}
+
+#canvas11 {
+    top: 420px;
+    left: 2260px;
+    filter: grayscale(100%) brightness(2.0) contrast(1.2);
+}
+
+/* Updated styling for arrowCanvas */
+#arrowCanvas {
+    position: absolute; /* Ensure it stays in flow */
+    top: 400px;
+    left: 450px;
+    width: 600px; /* Adjust width */
+    height: 200px; /* Adjust height */
+    transform: rotate(-30deg); /* Rotate the arrow */
+    border: 0px; /* Use custom border color */
+    margin-top: 20px; /* Add spacing from the previous element */
+    background-color: transparent; /* Ensure transparency */
+}
+
+/* Updated styling for graphCanvas */
+#graphCanvas {
+    position: absolute; /* Ensure it stays in flow */
+    top: 300px;
+    left: 850px;
+    width: 400px; /* Set width for consistency */
+    height: 400px; /* Set height for consistency */
+    border: 0px solid var(--product-review-black); /* Use custom border color */
+    margin-top: 20px; /* Add spacing from the previous element */
+    background-color: transparent; /* Ensure transparency */
+}
+
+/* Styling for redirect button */
+#redirectButton {
+    position: relative; /* Ensure it stays in flow */
+    margin: 20px auto; /* Center the button and add spacing */
+    padding: 10px 20px;
+    width: 100px; /* Set width for consistency */
+    height: 250px; /* Set height for consistency */
+    background-color: var(--product-review-black); /* Use custom black color */
+    color: var(--product-review-color); /* Use custom text color */
+    font-family: var(--note-font-family); /* Apply custom font */
+    font-weight: var(--note-font-weight);
+    font-size: var(--note-font-size);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#redirectButton:hover {
+    background-color: rgba(50, 50, 50, 1); /* Slightly lighter hover effect */
+}
+
+/* Text container styling */
+.text-container {
+    margin-top: 10px;
+    text-align: center;
+    max-width: 250px; /* Align with canvas width */
+    word-wrap: break-word; /* Prevent text overflow */
+    font-family: var(--note-font-family); /* Apply custom font */
+    font-weight: var(--note-font-weight);
+    font-size: var(--note-font-size);
+    color: var(--product-review-black); /* Use custom text color */
+    letter-spacing: var(--note-letter-spacing);
+    line-height: var(--note-line-height);
+}
+
+/* Page title styling */
+.page-title {
+    width: 100%; /* Ensure title spans the entire width */
+    text-align: center; /* Center-align the text */
+    background-color: var(--product-review-color); /* Use the background color variable */
+    color: var(--product-review-black); /* Use the text color variable */
+    padding: 20px 0; /* Add spacing around the title */
+    font-family: var(--note-font-family); /* Apply the custom font */
+    font-weight: var(--note-font-weight); /* Use the defined font weight */
+    font-size: 28px; /* Slightly larger font size for the title */
+    letter-spacing: var(--note-letter-spacing);
+    line-height: var(--note-line-height);
+    border-bottom: 2px solid var(--product-review-black); /* Optional: Add a bottom border */
+}
+

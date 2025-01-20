@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Juxtaposition</title>
+    <link rel="stylesheet" href="stylewithtext.css"> <!-- Link to the external CSS file -->
+</head>
+<body>
+    <!-- Page Title -->
+    <header class="page-title">
+        <h1>Image Embedding Using CNNs</h1>
+    </header>
+
+    <!-- Canvases 1 to 4 with individual texts -->
+    <div class="canvas-wrapper">
+        <canvas id="canvas1"></canvas>
+        <div class="text-container">
+            Step 1: Input Image<br>
+            The process begins with the raw input image, represented as a grid of pixel values.<br>
+            This is the starting point for the CNN to analyze and prepare the image for feature extraction.
+        </div>
+    </div>
+    <div class="canvas-wrapper">
+        <canvas id="canvas2"></canvas>
+        <div class="text-container">
+            Step 2: Initial Convolution<br>
+            The CNN applies convolutional filters to the input image, capturing basic features like edges and textures.<br>
+            These filters create the first set of feature maps by identifying low-level patterns.
+        </div>
+    </div>
+    <div class="canvas-wrapper">
+        <canvas id="canvas3"></canvas>
+        <div class="text-container">
+            Step 3: Deeper Convolution<br>
+            As the CNN progresses, it captures more complex patterns like shapes and structures.<br>
+            Each layer builds on the previous one, extracting higher-level features for a richer understanding of the image.
+        </div>
+    </div>
+    <div class="canvas-wrapper">
+        <canvas id="canvas4"></canvas>
+        <div class="text-container">
+            Step 4: Salient Regions and Pooling<br>
+            Pooling operations reduce the size of feature maps while keeping the most important information.<br>
+            This step allows the CNN to focus on critical areas of the image, like specific textures or structural details.
+        </div>
+    </div>
+
+    <!-- Duplicate Canvases 5 to 7 -->
+    <div class="canvas-group">
+        <canvas id="canvas5"></canvas>
+        <canvas id="canvas6"></canvas>
+        <canvas id="canvas7"></canvas>
+    </div>
+    <div class="text-container">
+        Step 5: Feature Maps and Beyond<br>
+        Feature maps show how CNN filters respond to the image, highlighting specific patterns.<br>
+        Early layers capture simple features, while deeper layers focus on abstract elements like architectural style, all getting vectorized in the annexed red arrow.
+    </div>
+
+    <!-- Canvases 8 to 11 with Zoomed Tiling -->
+    <div class="canvas-group">
+        <canvas id="canvas8"></canvas>
+        <canvas id="canvas9"></canvas>
+        <canvas id="canvas10"></canvas>
+        <canvas id="canvas11"></canvas>
+    </div>
+    <div class="text-container">
+        Step 6: Embedding<br>
+        The CNN condenses features into embeddings—vectors representing the image in a multi-dimensional space.<br>
+        These embeddings cluster similar images together, enabling tasks like classification and retrieval.
+    </div>
+
+    <!-- Arrow Canvas -->
+    <div class="canvas-wrapper">
+        <canvas id="arrowCanvas"></canvas>
+        <div class="text-container">
+            Arrow Canvas: Red Arrow<br>
+            Visualizing the flow from lower-level features to high-level embeddings through a vectorized representation.
+        </div>
+    </div>
+
+    <!-- Graph Canvas with Step 7 -->
+    <div class="canvas-wrapper">
+        <canvas id="graphCanvas"></canvas>
+        <div class="text-container">
+            Step 7: Projection<br>
+            The CNN projects vectorized embeddings into a multi-dimensional space for classification or retrieval tasks.
+        </div>
+    </div>
+
+    <!-- Redirect Button -->
+    <button id="redirectButton" onclick="navigateToAnotherPage()">Example</button>
+
+    <script>
+        function navigateToAnotherPage() {
+            // Redirect to another HTML file
+            window.location.href = '3_EXAMPLE.html'; // Replace with the actual file name
+        }
+    </script>
+    <script src="script.js"></script> <!-- Link to the external JS file -->
+</body>
+</html>
